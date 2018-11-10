@@ -3,7 +3,6 @@ const redis = require("redis");
 const ulti = require("util");
 const { redisUrl } = require("../config/keys");
 
-const redisUrl = "redis://127.0.0.1:6379";
 const client = redis.createClient(redisUrl);
 const exec = mongoose.Query.prototype.exec;
 

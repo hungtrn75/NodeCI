@@ -22,7 +22,7 @@ class CustomPage {
     this.page = page;
   }
 
-  async login(redirect = "http://localhost:3000/") {
+  async login(redirect = "http://localhost:3000") {
     const user = await userFactory();
     const { session, sig } = sessionFactory(user);
 
