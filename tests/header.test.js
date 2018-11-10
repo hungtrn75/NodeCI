@@ -1,6 +1,9 @@
 const Page = require("./helpers/page");
+const mongoose = require("mongoose");
 
 let page;
+
+afterAll(() => mongoose.disconnect());
 
 describe("Test header in client: http://localhost:3000", () => {
   beforeEach(async () => {
