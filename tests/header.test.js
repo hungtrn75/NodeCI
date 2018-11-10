@@ -1,4 +1,3 @@
-const mongoose = require("mongoose");
 const Page = require("./helpers/page");
 
 let page;
@@ -12,8 +11,6 @@ describe("Test header in client: http://localhost:3000", () => {
   afterEach(async () => {
     page.close();
   });
-
-  afterAll(() => mongoose.disconnect());
 
   it("the header had a correct text", async () => {
     const text = await page.getContentOf("a.brand-logo");
